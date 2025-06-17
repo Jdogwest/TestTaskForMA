@@ -6,7 +6,7 @@
   ></app-check-child-node>
   } @else {
   <app-id-node [idNode]="node()"></app-id-node>
-  } @if (!checkChildrens || openChildrens()){
+  } @if (!checkChildrens() || openChildrens()){
   <div class="next-level">
     @for (node of node().children; track $index) {
     <app-node

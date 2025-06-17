@@ -7,7 +7,9 @@
 >
   <div class="node-data">
     <p>title: {{ idNode().title }}</p>
+    @if (idNode().children.length) {
     <p>childrens: {{ idNode().children.length }}</p>
+    }
   </div>
   @if (idNode().children.length) {
   <button
