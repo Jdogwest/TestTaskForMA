@@ -1,0 +1,18 @@
+.node {
+  &__button {
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+  }
+}
+
+.next-level {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+
+  &__element {
+    flex-grow: 1;
+  }
+}

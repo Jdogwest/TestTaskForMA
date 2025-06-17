@@ -1,0 +1,19 @@
+<div
+  class="node-box"
+  [ngClass]="{
+    node_deleted: idNode().is_deleted,
+    node_enable: !idNode().is_deleted
+  }"
+>
+  <div class="node-data">
+    <p>title: {{ idNode().title }}</p>
+    <p>childrens: {{ idNode().children.length }}</p>
+  </div>
+  @if (idNode().children.length) {
+  <button
+    [innerHTML]="buttonSymbol()"
+    class="show-button"
+    (click)="showChildrens()"
+  ></button>
+  }
+</div>

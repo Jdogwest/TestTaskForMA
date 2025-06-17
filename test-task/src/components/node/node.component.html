@@ -1,0 +1,20 @@
+<div class="node-container">
+  @if (checkChildrens()) {
+  <app-check-child-node
+    [idNode]="node()"
+    (showNodes)="showChildrens()"
+  ></app-check-child-node>
+  } @else {
+  <app-id-node [idNode]="node()"></app-id-node>
+  } @if (!checkChildrens || openChildrens()){
+  <div class="next-level">
+    @for (node of node().children; track $index) {
+    <app-node
+      [node]="node"
+      class="next-level__element"
+      [checkChildrens]="checkChildrens()"
+    ></app-node>
+    }
+  </div>
+  }
+</div>

@@ -1,0 +1,13 @@
+<div
+  class="node-box"
+  [ngClass]="{
+    node_deleted: idNode().is_deleted,
+    node_enable: !idNode().is_deleted
+  }"
+>
+  <div class="node-data">
+    <p>id: {{ idNode().id }}</p>
+    <p>title: {{ idNode().title }}</p>
+    <button (click)="logNode()" class="node__button">click</button>
+  </div>
+</div>
